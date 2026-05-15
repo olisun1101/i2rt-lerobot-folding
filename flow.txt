@@ -1,0 +1,17 @@
+can_leader_l  ─┐
+               ├─ I2RTBimanualTeleopAdapter.get_action()
+can_leader_r  ─┘
+                         ↓
+                  action dict
+                         ↓
+can_follower_l ─┐
+                ├─ I2RTDualArmRobot.send_action()
+can_follower_r ─┘
+                         ↓
+        I2RTDualArmRobot.get_observation()
+        ├─ follower joint state
+        ├─ top camera
+        ├─ left camera
+        └─ right camera
+                         ↓
+                LeRobot dataset

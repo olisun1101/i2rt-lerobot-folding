@@ -1,0 +1,18 @@
+wrapper.py
+    I2RTDualArmRobot
+        - follower left
+        - follower right
+        - top RealSense
+        - left RealSense
+        - right RealSense
+
+teleop_adapter.py
+    I2RTBimanualTeleopAdapter
+        - leader left
+        - leader right
+
+record_loop.py
+    action = teleop.get_action()
+    robot.send_action(action)
+    obs = robot.get_observation()
+    save(obs, action)
